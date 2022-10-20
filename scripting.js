@@ -26,8 +26,6 @@ function getComputerChoice() {
     let today = new Date();
     let time = today.getMilliseconds();
 
-    computerlabel.textContent=computer_choice + "\t" + time;
-
     return computer_choice;
 }
 
@@ -53,10 +51,6 @@ function playRound(player_selection) {
         }
     }
 }
-
-generate_button.addEventListener('click',getComputerChoice);
-
-
 
 rock_button.addEventListener('click',() => {playRound('rock')});
 paper_button.addEventListener('click',() => playRound('paper'));
