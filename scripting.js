@@ -10,6 +10,8 @@ const round_label = document.querySelector('#round');
 const player_score_label = document.querySelector('#player_score');
 const computer_score_label = document.querySelector('#computer_score');
 
+const reset_button = document.querySelector('#reset');
+
 let round = 1;
 let player_score=0;
 let computer_score=0;
@@ -37,6 +39,30 @@ function getComputerChoice() {
     return computer_choice;
 }
 
+function updateRoundScore(reset=false) {
+    // update score and round number
+    round++;
+
+    if (resultlabel.textContent.includes('You win')) {
+        player_score++;
+        
+    } else if (resultlabel.textContent.includes('You lose')) {
+        computer_score++;
+        
+    }
+
+    if (reset) {
+        player_score=0;
+        computer_score=0;
+        round=1;
+        resultlabel.textContent='';
+    }
+
+    round_label.textContent = `Round ${round}`
+    player_score_label.textContent=`Player Score: ${player_score}`;
+    computer_score_label.textContent=`Computer Score: ${computer_score}`;
+}
+
 function playRound(player_selection) {
 
     let computer_selection = getComputerChoice();
@@ -59,20 +85,12 @@ function playRound(player_selection) {
         }
     }
 
-    // update score and round number
-    if (resultlabel.textContent.includes('You win')) {
-        player_score++;
-        player_score_label.textContent=`Player score: ${player_score}`;
-    } else if (resultlabel.textContent.includes('You lose')) {
-        computer_score++;
-        computer_score_label.textContent=`Computer score: ${computer_score}`;
-    }
-
-    round++;
-    round_label.textContent = `Round ${round}`
+    updateRoundScore()
 
 }
 
-rock_button.addEventListener('click',() => {playRound('rock')});
+rock_button.addEventListener('click',() => playRound('rock'));
 paper_button.addEventListener('click',() => playRound('paper'));
 scissors_button.addEventListener('click', () => playRound('scissors'));
+
+reset_button.addEventListener('click', () => updateRoundScore(true));
