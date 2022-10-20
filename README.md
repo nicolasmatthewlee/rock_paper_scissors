@@ -1,2 +1,2 @@
 # rock_paper_scissors
-Rock paper scissors web application. 
+Barebone HTML and javascript rock, paper, scissors web application. Includes round tracking, score tracking, and game reset. 
