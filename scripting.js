@@ -59,8 +59,8 @@ function updateRoundScore(reset=false) {
     }
 
     round_label.textContent = `Round ${round}`
-    player_score_label.textContent=`Player Score: ${player_score}`;
-    computer_score_label.textContent=`Computer Score: ${computer_score}`;
+    player_score_label.textContent=`${player_score}`;
+    computer_score_label.textContent=`${computer_score}`;
 }
 
 function playRound(player_selection) {

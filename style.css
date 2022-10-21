@@ -4,8 +4,9 @@
 }
 
 #round {
-    background-color: red;
-    padding-bottom: 20px;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 #scores {
@@ -13,16 +14,36 @@
     justify-content: center;
 }
 
-#player_score, #computer_score {
+#player_score, #computer_score { 
     flex: 1;
-    background-color: blue;
+    text-align: center;
+    font-size: 150px;
+}
+
+#score_labels {
+    display: flex;
+    justify-content: center;
+}
+
+#player_score_label, #computer_score_label {
+    flex: 1;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
 }
 
+#result_container {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+}
+
+#resultlabel {
+    flex: 1;
+    min-height: 20px;
+    text-align: center;
+}
 
 #buttons {
     display: flex;
@@ -40,10 +61,11 @@
 #reset_container {
     display: flex;
     justify-content: center;
-    background-color: yellow;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 #reset {
     flex: 0;
+    height: 30px;
+    min-width: 80px;
 }
