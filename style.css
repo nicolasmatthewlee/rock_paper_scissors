@@ -1,0 +1,49 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+#round {
+    background-color: red;
+    padding-bottom: 20px;
+}
+
+#scores {
+    display: flex;
+    justify-content: center;
+}
+
+#player_score, #computer_score {
+    flex: 1;
+    background-color: blue;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+#buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#rock, #paper, #scissors {
+    flex: 1;
+    max-width: 150px;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#reset_container {
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    margin-top: 20px;
+}
+
+#reset {
+    flex: 0;
+}
